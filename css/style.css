@@ -1,0 +1,59 @@
+body{
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+
+}
+#gameField {
+  position: relative;
+  height: 400px;
+  width: 600px;
+  border: 1px solid white;
+}
+
+#paddle1, #paddle2 {
+  position: absolute;
+  width: 15px;
+  height: 80px;
+  background-color: white;
+}
+
+#paddle1 {
+  left: 30px;
+}
+
+#paddle2 {
+  right: 30px;
+}
+
+#ball {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  left: 50%;
+  top: 50%;
+}
+
+#score1, #score2 {
+  position: absolute;
+  top: 10px;
+  font-size: 30px;
+}
+
+#score1 {
+  left: 10px;
+}
+
+#score2 {
+  right: 10px;
+}
+
+#middleLine {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  background: linear-gradient(white 50%, transparent 50%);
+  background-size: 100% 53.5px;
+}
