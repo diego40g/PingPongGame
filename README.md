@@ -1,6 +1,7 @@
 # PingPongGame
-
+<p align="center">
 <img src="https://i.ytimg.com/vi/tHnPWQKX-wE/maxresdefault.jpg" width="500">
+</p>
 
 Este es un juego de ping pong básico desarrollado como un ejercicio de programación. El objetivo principal de este proyecto es practicar y mejorar nuestras habilidades de programación.
 
