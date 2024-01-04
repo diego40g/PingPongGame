@@ -6,7 +6,7 @@ var paddle2 = document.getElementById('paddle2');
 
 // Define las propiedades del juego
 var ballDir = [1, 1];
-var paddleSpeed = 2;
+var paddleSpeed = 4;
 var paddle1Dir = 0;
 var paddle2Dir = 0;
 
@@ -22,8 +22,8 @@ var points2 = 0;
 setInterval(function() {
     // Mueve la pelota
     var ballPos = [ball.offsetLeft, ball.offsetTop];
-    ballPos[0] += ballDir[0];
-    ballPos[1] += ballDir[1];
+    ballPos[0] += ballDir[0] * 4;
+    ballPos[1] += ballDir[1] * 4;
     ball.style.left = ballPos[0] + 'px';
     ball.style.top = ballPos[1] + 'px';
 
