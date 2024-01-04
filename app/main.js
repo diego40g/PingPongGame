@@ -33,12 +33,14 @@ setInterval(function() {
         score2.textContent = points2;
         ballPos[0] = field.offsetWidth / 2; // reset ball position
         ballDir[0] = 1;
+        return; //este era el error
     }
     if (ballPos[0] >= field.offsetWidth - ball.offsetWidth) {
         points1++;
         score1.textContent = points1;
         ballPos[0] = field.offsetWidth / 2; // reset ball position
         ballDir[0] = -1;
+        return; //este era el error
     }
 
     // Rebota la pelota en los bordes del campo
@@ -101,6 +103,10 @@ window.addEventListener('keyup', function(e) {
             paddle2Dir = 0;
             break;
     }
+});
+
+
+
 });
 
 
