@@ -1,23 +1,37 @@
-body{
-  background-color: black;
+/* CSS combinado para lograr el diseño de una cancha de fútbol */
+
+/* Estilos generales */
+body {
+  background-color: #2ECC71; /* Cambiado a verde claro para simular el césped */
   color: white;
   font-family: sans-serif;
-
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+/* Estilos del campo de juego */
 #gameField {
   position: relative;
-  height: 400px;
   width: 600px;
-  border: 1px solid white;
+  height: 400px;
+  background-color: #27AE60; /* Cambiado a verde oscuro para el campo */
+  border-radius: 10px;
+  border: 1px solid white; /* Añadido un borde blanco */
 }
 
-#paddle1, #paddle2 {
+/* Estilos de las paletas */
+#paddle1,
+#paddle2 {
   position: absolute;
   width: 15px;
   height: 80px;
-  background-color: white;
+  background-color: #fff; /* Cambiado a blanco */
 }
 
+/* Alineación de las paletas */
 #paddle1 {
   left: 30px;
 }
@@ -26,34 +40,95 @@ body{
   right: 30px;
 }
 
+/* Estilos de la pelota */
 #ball {
   position: absolute;
-  height: 20px;
-  width: 20px;
-  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff; /* Cambiado a blanco */
+  /* Agregado centrado absoluto */
   left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('https://www.elheraldo.hn/binrepository/871x900/0c0/0d0/none/45933/NJCQ/NuestrosSuplementos_19587_1_EH627981_MG126517542.jpg'); /* Ruta a tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen */
+  
 }
 
-#score1, #score2 {
+/* Estilos para el marcador */
+#score1,
+#score2 {
   position: absolute;
-  top: 10px;
-  font-size: 30px;
+  font-size: 48px;
+  color: #fff; /* Cambiado a blanco */
 }
 
 #score1 {
-  left: 10px;
+  left: 50px;
+  top: 10px;
 }
 
 #score2 {
-  right: 10px;
+  right: 50px;
+  top: 10px;
 }
 
+/* Estilos para la línea del medio */
 #middleLine {
   position: absolute;
   width: 2px;
   height: 100%;
+  background-color: #fff; /* Cambiado a blanco */
   left: 50%;
-  background: linear-gradient(white 50%, transparent 50%);
-  background-size: 100% 53.5px;
+  transform: translateX(-50%);
+}
+
+#middleCircle {
+  position: absolute;
+  width: 200px; /* Ajusta el tamaño del círculo según sea necesario */
+  height: 200px; /* Ajusta el tamaño del círculo según sea necesario */
+  border-radius: 50%;
+  border: 2px solid #fff; /* Borde blanco */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#goalAreaLeft {
+  position: absolute;
+  width: 50px; /* Ancho del área del arquero */
+  height: 200px; /* Altura del área del arquero */
+  border: 2px solid #fff; /* Borde blanco para el contorno */
+  box-sizing: border-box; /* El borde se incluirá en el tamaño */
+  left: 0;
+  top: 100px; /* Posición vertical */
+}
+
+/* Estilos para el contorno del área del arquero derecho */
+#goalAreaRight {
+  position: absolute;
+  width: 50px; /* Ancho del área del arquero */
+  height: 200px; /* Altura del área del arquero */
+  border: 2px solid #fff; /* Borde blanco para el contorno */
+  box-sizing: border-box; /* El borde se incluirá en el tamaño */
+  right: 0;
+  top: 100px; /* Posición vertical */
+}
+
+body {
+  background-image: url('https://ca-times.brightspotcdn.com/dims4/default/f640f74/2147483647/strip/false/crop/4032x2599+0+0/resize/1486x958!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fd0%2F3c%2F6f650a08dd9032219dc39624aa2e%2F207c96dca2fb49339cdaab3037103e08'); /* Ruta a tu imagen de fondo */
+  background-size: cover; /* Ajusta la imagen al tamaño de la página */
+  /* Otros estilos del cuerpo de la página */
+}
+
+.title {
+  text-align: center; /* Centra el texto */
+  font-size: 3em; /* Tamaño grande del texto */
+  color: white; /* Color del texto */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 20px; /* Distancia desde la parte superior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Centra exactamente el título */
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto al título */
 }
