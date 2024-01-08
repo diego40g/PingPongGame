@@ -6,7 +6,7 @@ var paddle2 = document.getElementById('paddle2');
 
 // Define las propiedades del juego
 var ballDir = [1, 1];
-var paddleSpeed = 4;
+var paddleSpeed = 2;
 var paddle1Dir = 0;
 var paddle2Dir = 0;
 
@@ -22,8 +22,8 @@ var points2 = 0;
 setInterval(function() {
     // Mueve la pelota
     var ballPos = [ball.offsetLeft, ball.offsetTop];
-    ballPos[0] += ballDir[0] * 4;
-    ballPos[1] += ballDir[1] * 4;
+    ballPos[0] += ballDir[0];
+    ballPos[1] += ballDir[1];
     ball.style.left = ballPos[0] + 'px';
     ball.style.top = ballPos[1] + 'px';
 
@@ -65,11 +65,11 @@ setInterval(function() {
     }
 
     // Rebota la pelota en las paletas
-    if (ballPos[0] <= paddle1.offsetLeft + paddle1.offsetWidth && ballPos[1] >= paddle1.offsetTop && ballPos[1] <= paddle1.offsetTop + paddle1.offsetHeight) {
-        ballDir[0] = 1;
+    if (ballPos[5] <= paddle1.offsetLeft + paddle1.offsetWidth && ballPos[1] >= paddle1.offsetTop && ballPos[1] <= paddle1.offsetTop + paddle1.offsetHeight) {
+        ballDir[5] = 1;
     }
-    if (ballPos[0] >= paddle2.offsetLeft - ball.offsetWidth && ballPos[1] >= paddle2.offsetTop && ballPos[1] <= paddle2.offsetTop + paddle2.offsetHeight) {
-        ballDir[0] = -1;
+    if (ballPos[5] >= paddle2.offsetLeft - ball.offsetWidth && ballPos[1] >= paddle2.offsetTop && ballPos[1] <= paddle2.offsetTop + paddle2.offsetHeight) {
+        ballDir[5] = -1;
     }
 }, 20);
 
