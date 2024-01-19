@@ -22,8 +22,8 @@ var points2 = 0;
 setInterval(function() {
     // Mueve la pelota
     var ballPos = [ball.offsetLeft, ball.offsetTop];
-    ballPos[0] += ballDir[0] * 4;
-    ballPos[1] += ballDir[1] * 4;
+    ballPos[0] += ballDir[0] * 14;
+    ballPos[1] += ballDir[1] * 14;
     ball.style.left = ballPos[0] + 'px';
     ball.style.top = ballPos[1] + 'px';
 
@@ -33,6 +33,8 @@ setInterval(function() {
         score2.textContent = points2;
         ballPos[0] = field.offsetWidth / 2; // reset ball position
         ballDir[0] = 1;
+        if (points1 == 2)alert ("GANADOR 1 GANA")
+        if (points2 == 2)alert("PLAyER 2 GANA")
     }
     if (ballPos[0] >= field.offsetWidth - ball.offsetWidth) {
         points1++;
@@ -77,16 +79,16 @@ setInterval(function() {
 window.addEventListener('keydown', function(e) {
     switch (e.key) {
         case 'w':
-            paddle1Dir = -1;
+            paddle1Dir = -5;
             break;
         case 's':
-            paddle1Dir = 1;
+            paddle1Dir = 5;
             break;
         case 'ArrowUp':
-            paddle2Dir = -1;
+            paddle2Dir = -5;
             break;
         case 'ArrowDown':
-            paddle2Dir = 1;
+            paddle2Dir = 5;
             break;
     }
 });
